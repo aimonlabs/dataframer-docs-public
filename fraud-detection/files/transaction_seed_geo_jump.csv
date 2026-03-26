@@ -1,0 +1,11 @@
+transaction_id,customer_name,event_timestamp,amount,currency,merchant_category_code,city,state,country,payment_channel,auth_method,device_trust_level,txn_velocity_24h,days_since_last_txn,account_age_months,txns_today,declines_30d
+TXN-N-01,John Doe,2026-03-12T08:45:00Z,38.00,USD,5411,new_york,new_york,us,POS,PIN,high,1,0,25,1,0
+TXN-N-02,John Doe,2026-03-12T09:05:30Z,62.00,USD,5812,new_york,new_york,us,ECOM,OTP,high,2,0,25,2,0
+TXN-N-03,John Doe,2026-03-12T09:58:12Z,110.00,USD,5732,los_angeles,california,us,ECOM,OTP,medium,3,0,25,3,0
+TXN-N-04,John Doe,2026-03-12T10:06:40Z,27.00,USD,5411,los_angeles,california,us,POS,NONE,medium,4,0,25,4,0
+TXN-N-05,John Doe,2026-03-12T11:22:18Z,95.00,USD,5814,chicago,illinois,us,ECOM,OTP,medium,5,0,25,5,0
+TXN-N-06,John Doe,2026-03-12T11:29:44Z,19.50,USD,5499,chicago,illinois,us,POS,NONE,medium,6,0,25,6,0
+TXN-N-07,John Doe,2026-03-12T12:03:07Z,140.00,USD,5732,san_francisco,california,us,ECOM,OTP,medium,7,0,25,7,0
+TXN-N-08,John Doe,2026-03-12T12:15:55Z,22.00,USD,5411,san_francisco,california,us,POS,PIN,medium,8,0,25,8,0
+TXN-N-09,John Doe,2026-03-12T12:48:31Z,180.00,USD,5732,miami,florida,us,ECOM,OTP,medium,9,0,25,9,0
+TXN-N-10,John Doe,2026-03-12T13:02:14Z,15.75,USD,5499,miami,florida,us,POS,PIN,medium,10,0,25,10,0
