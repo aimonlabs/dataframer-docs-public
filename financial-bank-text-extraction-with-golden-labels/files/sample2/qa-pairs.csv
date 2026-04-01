@@ -1,0 +1,6 @@
+question,answer
+"What is the bank's total commercial real estate loans as a percentage of Tier 1 Capital plus ACL compare to the regulatory supervisory threshold of 300%? Print only the bank's CRE-to-(Tier-1-plus-ACL) percentage as a single number.","43.90"
+"Within the non-owner occupied CRE bucket, what is the bank's three-year growth rate relative to its peer group? Print only the bank's three-year growth rate as a single number or percentage.","12.87"
+"What share of the bank's total loan portfolio is concentrated in a single loan category, Print only the percentage share of the largest single loan category.","53.91"
+"What is the bank's 1-4 family residential exposure as a percentage of Tier 1 Capital? Print only a single percentage.","410.13"
+"Is the bank's non-depository and other loans category growing faster than its Tier 1 Capital base, potentially signaling undisclosed concentration risk? Reply with N/A if 0.","True"
