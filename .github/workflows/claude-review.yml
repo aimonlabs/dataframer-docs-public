@@ -4,6 +4,7 @@ name: Claude PR review
 #   @review                 -> Fable 5, subscription billing
 #   @review opus            -> Opus 5
 #   @review sonnet api      -> Sonnet 5, API-key billing
+#   @review inline          -> also post per-line comments (off unless asked)
 # Words may appear in any order on the first line; unrecognised words are ignored.
 #
 # This file is only a trigger. Everything the review actually does — the prompt,
