@@ -1,0 +1,36 @@
+name: Claude PR review
+
+# Manual only. Comment on any PR in this repo:
+#   @review                 -> Fable 5, subscription billing
+#   @review opus            -> Opus 5
+#   @review sonnet api      -> Sonnet 5, API-key billing
+# Words may appear in any order on the first line; unrecognised words are ignored.
+#
+# This file is only a trigger. Everything the review actually does — the prompt,
+# the cross-repo discovery, the sticky comment — lives in the shared workflow
+# referenced below. Edit it there, not here, so all repos stay in step.
+on:
+  issue_comment:
+    types: [created]
+
+# The group must encode whether this comment is a review request. Every comment on
+# the PR — a bot's included — starts a run that joins the group and cancels whatever
+# is in flight, even though the `if` below then skips the job itself. Splitting on
+# the same startsWith test keeps unrelated chatter in its own group.
+concurrency:
+  group: claude-review-${{ github.event.issue.number }}-${{ startsWith(github.event.comment.body, '@review') }}
+  cancel-in-progress: true
+
+jobs:
+  review:
+    if: >-
+      github.event.issue.pull_request != null &&
+      startsWith(github.event.comment.body, '@review')
+    uses: aimonlabs/dataframer-agent-skills/.github/workflows/claude-review.yml@main
+    # A called workflow can never hold more permission than its caller grants here.
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      id-token: write
+    secrets: inherit
