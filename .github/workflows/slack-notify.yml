@@ -1,0 +1,23 @@
+name: Slack notify
+
+# Posts PR / issue / release lifecycle events to the notifications Slack
+# channel — the custom replacement for the official GitHub Slack app
+# subscription. This file is only a trigger: the message format and the
+# suppression rules (draft PRs, "Promote staging to main" openings) live in
+# the shared workflow referenced below. Edit it there, not here, so all repos
+# stay in step.
+on:
+  pull_request:
+    types: [opened, reopened, ready_for_review, closed]
+  issues:
+    types: [opened, reopened, closed]
+  release:
+    types: [published]
+
+jobs:
+  notify:
+    uses: aimonlabs/dataframer-agent-skills/.github/workflows/slack-notify.yml@main
+    # The shared workflow only posts to a webhook — it needs no repo access.
+    permissions:
+      contents: read
+    secrets: inherit
