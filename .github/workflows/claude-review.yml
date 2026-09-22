@@ -1,7 +1,7 @@
 name: Claude PR review
 
 # Manual only. Comment on any PR in this repo:
-#   @review                 -> Opus 5, whichever billing is armed (API key wins)
+#   @review                 -> Opus 5.5, whichever billing is armed (API key wins)
 #   @review fable           -> Fable 5.1
 #   @review sonnet api      -> Sonnet 5, forced onto API-key billing
 #   @review inline          -> also post per-line comments (off unless asked)
